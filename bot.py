@@ -32,8 +32,7 @@ async def on_message(message):
     '''
 
     # List of words that the bot does not allow
-    forbidden_words = ['fuck', 'shit', 'damn', 'bitch', 'cunt', 'faggot',
-                       'nigger', 'asshole', 'asshat', 'dick', 'cock']
+    forbidden_words = ["OMMITTED"]
 
     # Opening Jokes.txt, a text file containing a few classic one-liners
     jokes_file = open('Jokes.txt', 'r')
