@@ -1,9 +1,3 @@
-'''
-/////////////////////////////CODED BY BRANDON RAO/////////////////////////////
-
-Note that this project references files that must be included in the same
-directory as this file in order for this code to work.
-'''
 import discord
 import asyncio
 import pickle
@@ -43,24 +37,16 @@ async def on_message(message):
     person = str(message.author)
 
     # Remove all the files that are not to be chosen by the random meme
-    # selector
-    file_names = os.listdir('C:\\Users\\iamso\\Desktop\\bot')
-    file_names.remove('deletethis.jpg')
-    file_names.remove('deletethis1.jpg')
-    file_names.remove('deletethis2.jpg')
-    file_names.remove('deletethis3.jpg')
-    file_names.remove('deletethis4.jpg')
-    file_names.remove('deletethis5.jpg')
-    file_names.remove('deletethis6.jpg')
-    file_names.remove('noswearing.jpg')
-    file_names.remove('noswearing1.jpg')
-    file_names.remove('noswearing2.jpg')
-    file_names.remove('noswearing3.jpg')
-    file_names.remove('noswearing4.jpg')
-    file_names.remove('noswearing5.jpg')
-    file_names.remove('noswearing6.jpg')
-    file_names.remove('bot.py')
-    file_names.remove('Jokes.txt')
+    # selector, such as the bot itself and a series of images to be
+    # accessed by a user on command
+    file_names = os.listdir('DIRECTORY OF THIS FILE')
+    exlude = ['deletethis.jpg', 'deletethis1.jpg', 'deletethis2.jpg',
+              'deletethis3.jpg', 'deletethis4.jpg', 'deletethis5.jpg',
+              'deletethis6.jpg', 'noswearing.jpg', 'noswearing1.jpg',
+              'noswearing2.jpg', 'noswearing3.jpg', 'noswearing4.jpg',
+              'noswearing5.jpg', 'noswearing6.jpg', 'bot.py', 'Jokes.txt']
+    for element in exclude:
+        file_names.remove(element)
 
     # !delete this makes polybot send a random delete this meme
     if message.content.startswith('!deletethis'):
